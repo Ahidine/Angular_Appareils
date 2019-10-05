@@ -1,0 +1,26 @@
+<div class="col-sm-8 col-sm-offset-2">
+	<div class="row">
+		<form [formGroup]="usersForm" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<label for="name">Nom</label>
+				<input type="text" class="form-control" id="name" formControlName="name">
+			</div>
+			<div class="form-group">
+				<label for="Lastname">LastName</label>
+				<input type="text" class="form-control" id="Lastname" formControlName="lastName">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email" formControlName="email">
+			</div>
+			<div class="form-group">
+				<label for="drinkPreference">Quelle boisson préférez-vous ?</label>
+				<select id="drinkPreference" class="form-control" formControlName="drinkPreference">
+					<option value="jus d\'orange">Jus d'orange</option>
+					<option value="jus de mangue">Jus de mangue</option>
+				</select>
+			</div>
+			<input type="submit" class="btn btn-primary" [disabled]="usersForm.invalid" value="ok">
+			</form>
+		</div>
+	</div>

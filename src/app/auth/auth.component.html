@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="onSeConnecte()" *ngIf="!authStatus">
+	Se Connecter
+</button>
+<button class="btn btn-warning" (click)="onSeDeconnecte()" *ngIf="authStatus">
+	Deconnecter
+</button>
